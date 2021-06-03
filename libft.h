@@ -6,14 +6,13 @@
 /*   By: joiglesi <joiglesi@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 10:26:47 by joiglesi          #+#    #+#             */
-/*   Updated: 2021/06/02 15:28:38 by joiglesi         ###   ########.fr       */
+/*   Updated: 2021/06/03 09:39:57 by joiglesi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
-# include <stdio.h>
 
 typedef struct s_list
 {
