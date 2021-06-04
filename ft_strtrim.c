@@ -6,7 +6,7 @@
 /*   By: joiglesi <joiglesi@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 11:16:11 by joiglesi          #+#    #+#             */
-/*   Updated: 2021/06/01 09:35:31 by joiglesi         ###   ########.fr       */
+/*   Updated: 2021/06/03 15:21:10 by joiglesi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (ft_istrim(s1[start], set))
 		start++;

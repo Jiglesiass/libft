@@ -23,6 +23,8 @@ char	**ft_split(const char *s, char c)
 	int		c_index;
 	int		split_index;
 
+	if (!s)
+		return (NULL);
 	split = (char **)malloc(sizeof(char *) * ft_split_count(s, c) + 1);
 	if (!split)
 		return (NULL);

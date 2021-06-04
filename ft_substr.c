@@ -6,7 +6,7 @@
 /*   By: joiglesi <joiglesi@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 11:10:20 by joiglesi          #+#    #+#             */
-/*   Updated: 2021/06/01 12:47:07 by joiglesi         ###   ########.fr       */
+/*   Updated: 2021/06/03 15:19:31 by joiglesi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 		substr = (char *)malloc(sizeof(char));
 	else

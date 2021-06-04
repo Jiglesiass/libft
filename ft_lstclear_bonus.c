@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joiglesi <joiglesi@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 10:46:44 by joiglesi          #+#    #+#             */
-/*   Updated: 2021/06/02 14:39:25 by joiglesi         ###   ########.fr       */
+/*   Updated: 2021/06/04 09:31:10 by joiglesi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static void	ft_clear(t_list *lst, void (*del)(void *))
 {
 	if (lst->next)
 		ft_clear(lst->next, del);
-	free(lst->content);
-	del(lst);
+	if (lst->content)
+		del(lst->content);
+	free(lst);
 }
