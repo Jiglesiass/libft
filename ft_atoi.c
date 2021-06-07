@@ -6,7 +6,7 @@
 /*   By: joiglesi <joiglesi@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 18:33:46 by joiglesi          #+#    #+#             */
-/*   Updated: 2021/06/04 11:46:26 by joiglesi         ###   ########.fr       */
+/*   Updated: 2021/06/06 07:37:27 by joiglesi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
 			neg = 1;
-	if (!ft_isdigit(str[i]) && str[i])
+	if (!ft_isdigit(str[i]))
 		return (0);
 	res = 0;
 	res = str[i++] - '0';
