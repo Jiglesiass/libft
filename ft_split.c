@@ -22,14 +22,16 @@ char	**ft_split(const char *s, char c)
 	char	**split;
 	int		c_index;
 	int		split_index;
+	int		i;
 
 	if (!s)
 		return (NULL);
-	split = (char **)malloc(sizeof(char *) * ft_split_count(s, c) + 1);
+	i = ft_strlen(s);
+	split = (char **)malloc(sizeof(char *) * (ft_split_count(s, c) + 1));
 	if (!split)
 		return (NULL);
 	split_index = 0;
-	while (*s)
+	while (i > 0)
 	{
 		c_index = ft_strnchr(s, c);
 		if (c_index > 0)
@@ -39,6 +41,7 @@ char	**ft_split(const char *s, char c)
 				return (NULL);
 		}
 		s += c_index + 1;
+		i -= (c_index + 1);
 	}
 	return (split);
 }
@@ -47,14 +50,17 @@ static int	ft_split_count(const char *s, char c)
 {
 	int	c_index;
 	int	count;
+	int	i;
 
 	count = 0;
-	while (*s)
+	i = ft_strlen(s);
+	while (i > 0)
 	{
 		c_index = ft_strnchr(s, c);
 		if (c_index > 0)
 			count++;
 		s += c_index + 1;
+		i -= (c_index + 1);
 	}
 	return (count);
 }
