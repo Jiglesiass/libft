@@ -6,7 +6,7 @@
 /*   By: joiglesi <joiglesi@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 18:57:21 by joiglesi          #+#    #+#             */
-/*   Updated: 2021/06/01 12:25:14 by joiglesi         ###   ########.fr       */
+/*   Updated: 2021/06/11 14:44:40 by joiglesi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	s2 = malloc(ft_strlen(s1) + 1);
-	if (!s2)
+	if (!s2 || !s1)
 		return (NULL);
 	i = 0;
 	while (s1[i])
